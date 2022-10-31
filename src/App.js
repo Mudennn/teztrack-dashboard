@@ -16,6 +16,10 @@ import {Home} from './pages';
 
 import { useStateContext } from './contexts/ContextProvider'
 import Profile from './pages/Profile';
+import Coinlist from './pages/Coinlist';
+import CryptoDetail from './pages/CryptoDetail';
+
+
 
 
 
@@ -64,6 +68,8 @@ function App() {
                 <Route path='/home' element={<Home />}/>
                 <Route path='/' element={<Home />}/>
                 <Route path='/profile' element={<Profile />}/>
+                <Route path='/coinlist' element={<Coinlist />} />
+                <Route path="/coin/:id" element={<CryptoDetail />} />
 
         </Routes>
         </div>

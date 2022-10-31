@@ -10,6 +10,13 @@ body{
     font-family: "Open Sans", sans-serif;
 }
 
+
+@layer components {
+  .wrapper-container {
+    @apply max-w-5xl mx-auto px-2
+  }
+}
+
 /* .sc-dFdIVH {
     background-color: rgba(0,0,0,0) !important;
   }

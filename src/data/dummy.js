@@ -19,6 +19,10 @@ export const links = [
           name: 'profile',
           icon: <RiContactsLine />,
         },
+        {
+          name: 'coinlist',
+          icon: <RiContactsLine />,
+        },
       ],
     },
   ];

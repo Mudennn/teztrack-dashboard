@@ -1,0 +1,16 @@
+import React from 'react'
+import CoinDetail from '../components/CoinDetail'
+import HistoryChart from '../components/HistoryChart'
+
+
+const CryptoDetail = () => {
+   
+  return (
+    <div className='mt-10 wrapper-container'>
+        <HistoryChart />
+        <CoinDetail />
+    </div>
+  )
+}
+
+export default CryptoDetail
