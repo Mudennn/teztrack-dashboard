@@ -43,10 +43,10 @@ const Coinlist = () => {
   }
 
   return (
-    <div> 
+    <div className='bg-[#e5dcf8]'> 
         
          {/* Tranding coin  */}
-      <div className='items-center p-5 m-3'>
+      <div className='items-center p-5 m-3 '>
         <h3 className='text-2xl font-bold'>Trending Coin</h3>
         <div className='flex m-3 justify-center gap-2 items-center flex-wrap '>
           {trending.map((coin) => (

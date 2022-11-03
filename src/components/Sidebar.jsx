@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { SiShopware } from 'react-icons/si'
 import { MdOutlineCancel} from 'react-icons/md'
@@ -7,10 +7,11 @@ import { MdOutlineCancel} from 'react-icons/md'
 import { useStateContext } from '../contexts/ContextProvider'
 import {links} from '../data/dummy'
 
+
 const Sidebar = () => {
   // nak bagi button close untuk fon function
   const {activeMenu, setActiveMenu, screenSize} = useStateContext()
-
+  
   const handleCloseSideBar = () => {
     if(activeMenu && screenSize < 900) {
       setActiveMenu(false)
@@ -48,9 +49,8 @@ const Sidebar = () => {
                     onClick={handleCloseSideBar}
                     className={({ isActive}) => 
                     isActive ? activeLink : normalLink}>
-
                       {link.icon}
-                      <span className='capitalize'>{link.name}</span>
+                      <span className= "capitalize">{link.name}</span>
                     </NavLink>
                   ))}
                 </div>
