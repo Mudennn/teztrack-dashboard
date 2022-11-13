@@ -29,7 +29,7 @@ function App() {
     <div>
       <BrowserRouter>
       <Navbar2 />
-      <div className='flex w-full'>
+      <div className='flex '>
       <Sidebar2/>
       
       

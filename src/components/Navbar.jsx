@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import {AiOutlineMenu} from 'react-icons/ai'
+import { useStateContext } from '../contexts/ContextProvider'
 // import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 // import avatar from '../data/avatar.jpg'
 // import { UserProfile} from '.'
-import { useStateContext } from '../contexts/ContextProvider'
+
 // import { MdKeyboardArrowDown } from 'react-icons/md';
 
 // import { Fragment } from 'react'

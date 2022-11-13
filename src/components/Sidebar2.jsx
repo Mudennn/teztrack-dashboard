@@ -5,20 +5,31 @@ import { BsCurrencyBitcoin, BsGear } from "react-icons/bs"
 import { HiMenuAlt3 } from "react-icons/hi"
 import { MdOutlineDashboard } from "react-icons/md"
 import { Link } from "react-router-dom"
+import { useStateContext } from '../contexts/ContextProvider'
 
 
 const Sidebar2 = () => {
   const menus =[
     {name:"Dashboard", link:'/', icon: MdOutlineDashboard},
-    // {name:"Profile", link:'/profile', icon: AiOutlineUser},
+    {name:"Profile", link:'/profile', icon: AiOutlineUser},
     {name:"Market", link:'/coinlist', icon: BsCurrencyBitcoin},
     {name:"Setting", link:'/coinlist', icon: BsGear, margin: true}
   ]
 
   const [open,setOpen] = useState(true)
+  
+  // nak bagi button close untuk fon function
+  const {activeMenu, setActiveMenu, screenSize} = useStateContext()
+  
+  const handleCloseSideBar = () => {
+    if(activeMenu && screenSize < 900) {
+      setActiveMenu(false)
+    }
+  }
 
   return (
     <section className="flex gap-6">
+      {activeMenu && (
       <div className={`${open ? 'w-16' : 'w-52'} duration-500 bg-[#734ccc] min-h-screen text-gray-100 px-4`}>
         <div className="py-5 flex justify-end">
           <HiMenuAlt3 size={26} className="cursor-pointer " onClick={() => setOpen(!open)} />
@@ -41,7 +52,7 @@ const Sidebar2 = () => {
           }
         </div>
       </div>
-
+      )}
     </section>
   )
 }
