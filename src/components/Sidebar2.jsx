@@ -21,11 +21,11 @@ const Sidebar2 = () => {
   // nak bagi button close untuk fon function
   const {activeMenu, setActiveMenu, screenSize} = useStateContext()
   
-  const handleCloseSideBar = () => {
-    if(activeMenu && screenSize < 900) {
-      setActiveMenu(false)
-    }
-  }
+  // const handleCloseSideBar = () => {
+  //   if(activeMenu && screenSize < 900) {
+  //     setActiveMenu(false)
+  //   }
+  // }
 
   return (
     <section className="flex gap-6">

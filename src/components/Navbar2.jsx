@@ -8,7 +8,7 @@ import { useStateContext } from '../contexts/ContextProvider'
 const NavButton = ({customFunc, icon, color, dotColor}) => (
   // untuk open and close sidebar
   
-    <button type="button" onClick={customFunc} style={{color}} className="relative text-xl rounded-full  flex items-center justify-center md:hidden">
+    <button type="button" onClick={customFunc} style={{color}} className="relative text-xl rounded-full flex items-center justify-center lg:hidden">
       <span style={{background: dotColor}} className="absolute inline-flex " />
       {icon} 
     </button>
@@ -62,7 +62,7 @@ const Navbar2 = () => {
           />
         </div>
         {/* Connect wallet button  */}
-        <button className="bg-white hover:bg-[#734ccc] text-black hover:text-white font-semibold py-2 px-4 border-2 border-[#734ccc] rounded-full md:ml-2 md:w-44 ">
+        <button className="hover:bg-white bg-[#734ccc] hover:text-black text-white font-semibold py-2 px-4 border-2 border-[#734ccc] rounded-full md:ml-2 md:w-44 ">
           Connect Wallet
         </button>
       </div>

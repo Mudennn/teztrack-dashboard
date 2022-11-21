@@ -11,6 +11,8 @@ import Markets from '../components/Markets'
 
 
 
+
+
 export function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   }
@@ -21,6 +23,7 @@ const Coinlist = () => {
   const fetchTrendingCoins = async () => {
     const { data } = await axios.get(TrendingCoins("usd"))
     setTrending(data)
+    console.log(data)
   }
 
   useEffect (() => {
@@ -70,6 +73,7 @@ const Coinlist = () => {
                           {coin.price_change_percentage_24h >= 0 && '+'}{coin?.price_change_percentage_24h.toFixed(2)}%
                         </span>
                       </p>
+                      
                     </div>
                   </div>
               </Link>

@@ -26,7 +26,7 @@ function App() {
   // const { activeMenu } = useStateContext()
 
   return (
-    <div>
+    <div className='bg-[#e5dcf8]'>
       <BrowserRouter>
       <Navbar2 />
       <div className='flex '>
