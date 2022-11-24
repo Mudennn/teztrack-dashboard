@@ -4,10 +4,10 @@ import { useState } from "react";
 import Tokens from "../components/Tokens";
 import TransferHistory from "../components/TransferHistory";
 import Nfts from "../components/Nfts";
-import WalletInputs from "../components/WalletInputs";
-import PortfolioValue from "../components/PortfolioValue";
+import WalletInputs from "./WalletInputs";
+import PortfolioValue from "../src/components/PortfolioValue";
 import { Avatar, TabList, Tab } from "@web3uikit/core";
-import NativeTokens from "../components/NativeTokens";
+import NativeTokens from "./NativeTokens";
 
 
 function Profile() {

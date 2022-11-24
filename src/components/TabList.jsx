@@ -3,13 +3,15 @@ import { AiOutlineIdcard } from "react-icons/ai";
 import { BiWallet } from "react-icons/bi";
 import { BsCardList } from "react-icons/bs";
 import DefiTable from "./DefiTable";
+import FetchNFT from "./FetchNFT";
 import NFTCards from "./NFTCards";
 import TransactionTable from "./TransactionTable";
 import WalletChart from "./WalletChart";
 import WalletTable from "./WalletTable";
 
 
-const TabList = () => {
+const TabList = ({wallet, defiBalance, setDefiBalance, nft, setNft , id, setId}) => {
+
   const [toggleState, setToggleState] = useState(1);
   const toggleTab = (index) => {
     setToggleState(index);
@@ -89,13 +91,14 @@ const TabList = () => {
               <WalletChart />
             </div>
           </div>
-          <WalletTable />
+          <WalletTable wallet={wallet} defiBalance={defiBalance} setDefiBalance={setDefiBalance} />
           <DefiTable />
         </div>
 
         <div className={toggleState === 2 ? activeContent : content}>
           <h2 className="font-bold text-xl my-2">Collection List</h2>
           <NFTCards />
+          <FetchNFT wallet={wallet} nft={nft} setNft={setNft} id={id} setId={setId}/>
         </div>
 
         <div className={toggleState === 3 ? activeContent : content}>

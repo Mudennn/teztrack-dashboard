@@ -1,17 +1,20 @@
 import './App.css';
-// import { useState } from "react"
+import { useState } from "react"
 // import Sidebar from './components/Sidebar';
 // import Navbar from './components/Navbar'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 // import {Home} from './pages';
 // import { Avatar, TabList, Tab } from "@web3uikit/core"
 // import { useStateContext } from './contexts/ContextProvider'
-import Profile from './pages/Profile';
+// import Profile from '../trash/Profile';
 import Coinlist from './pages/Coinlist';
 import CryptoDetail from './pages/CryptoDetail';
 import Sidebar2 from './components/Sidebar2';
 import Navbar2 from './components/Navbar2';
 import Profile2 from './pages/Profile2';
+import NFT from './pages/NFT';
+// import Test from '../trash/Test';
+// import Profile3 from './pages/Profile3';
 
 
 
@@ -22,13 +25,18 @@ import Profile2 from './pages/Profile2';
 
 
 function App() {
+  const [wallet, setWallet] = useState("");
+    const [nativeBalance, setNativeBalance] = useState(0);
+    const [defiBalance, setDefiBalance] = useState([]); 
+    const [nft, setNft] = useState([]);
+    const [id, setId] = useState()
 
   // const { activeMenu } = useStateContext()
 
   return (
     <div className='bg-[#e5dcf8]'>
       <BrowserRouter>
-      <Navbar2 />
+      <Navbar2 wallet={wallet} setWallet={setWallet}/>
       <div className='flex '>
       <Sidebar2/>
       
@@ -62,11 +70,14 @@ function App() {
                 
         
         <Routes>
-                <Route path='/home' element={<Profile2 />}/>
-                <Route path='/' element={<Profile2 />}/>
-                <Route path='/profile' element={<Profile />}/>
+                <Route path='/home' element={<Profile2 wallet={wallet} setWallet={setWallet} nativeBalance={nativeBalance} setNativeBalance={setNativeBalance} defiBalance={defiBalance} setDefiBalance={setDefiBalance} nft={nft} setNft={setNft} id={id} setId={setId}/>}/>
+                <Route path='/' element={<Profile2 wallet={wallet} setWallet={setWallet} nativeBalance={nativeBalance} setNativeBalance={setNativeBalance} defiBalance={defiBalance} setDefiBalance={setDefiBalance} nft={nft} setNft={setNft} id={id} setId={setId}/>}/>
+                {/* <Route path='/profile' element={<Profile />}/> */}
                 <Route path='/coinlist' element={<Coinlist />} />
                 <Route path="/coin/:id" element={<CryptoDetail />} />
+                {/* <Route path="/test" element={<Test />} /> */}
+                {/* <Route path="/profile3" element={<Profile3 />} /> */}
+                <Route path="/nft/:id" element={<NFT wallet={wallet} nft={nft} setNft={setNft} id={id} setId={setId} /> } />
 
         </Routes>
         

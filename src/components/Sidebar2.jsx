@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from "react"
-import { AiOutlineUser } from "react-icons/ai"
+// import { AiOutlineUser } from "react-icons/ai"
 import { BsCurrencyBitcoin, BsGear } from "react-icons/bs"
 import { HiMenuAlt3 } from "react-icons/hi"
 import { MdOutlineDashboard } from "react-icons/md"
@@ -11,16 +11,16 @@ import { useStateContext } from '../contexts/ContextProvider'
 const Sidebar2 = () => {
   const menus =[
     {name:"Dashboard", link:'/', icon: MdOutlineDashboard},
-    {name:"Profile", link:'/profile', icon: AiOutlineUser},
+    // {name:"Profile", link:'/profile', icon: AiOutlineUser},
     {name:"Market", link:'/coinlist', icon: BsCurrencyBitcoin},
-    {name:"Setting", link:'/coinlist', icon: BsGear, margin: true}
+    {name:"Setting", link:'/coinlist', icon: BsGear, margin: true},
   ]
 
   const [open,setOpen] = useState(true)
   
   // nak bagi button close untuk fon function
-  const {activeMenu, setActiveMenu, screenSize} = useStateContext()
-  
+  const {activeMenu} = useStateContext()
+  // setActiveMenu, screenSize
   // const handleCloseSideBar = () => {
   //   if(activeMenu && screenSize < 900) {
   //     setActiveMenu(false)
