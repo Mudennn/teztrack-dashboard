@@ -58,7 +58,7 @@ const Navbar2 = ({ wallet, setWallet }) => {
         {/* Search bar  */}
         <SearchButton wallet={wallet} setWallet={setWallet} />
         {/* Connect wallet button  */}
-        <button className="hover:bg-white bg-[#734ccc] hover:text-black text-white font-semibold py-2 px-4 border-2 border-[#734ccc] rounded-full md:ml-2 md:w-44 ">
+        <button className="hover:bg-white bg-[#734ccc] hover:text-black text-white font-semibold py-2 px-4 border-2 border-[#734ccc] rounded-full md:ml-2 md:w-44 text-xs ">
           Connect Wallet
         </button>
       </div>

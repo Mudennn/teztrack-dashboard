@@ -5,12 +5,16 @@ import { BsCardList } from "react-icons/bs";
 import DefiTable from "./DefiTable";
 import FetchNFT from "./FetchNFT";
 import NFTCards from "./NFTCards";
+import SendAndReceived from "./SendAndReceived.jsx";
+import SentTable from "./SentTable";
+import TargetTable from "./TargetTable";
 import TransactionTable from "./TransactionTable";
+import TransactionTabList from "./TransactionTabList";
 import WalletChart from "./WalletChart";
 import WalletTable from "./WalletTable";
 
 
-const TabList = ({wallet, defiBalance, setDefiBalance, nft, setNft , id, setId}) => {
+const TabList = ({wallet, defiBalance, setDefiBalance}) => {
 
   const [toggleState, setToggleState] = useState(1);
   const toggleTab = (index) => {
@@ -92,18 +96,22 @@ const TabList = ({wallet, defiBalance, setDefiBalance, nft, setNft , id, setId})
             </div>
           </div>
           <WalletTable wallet={wallet} defiBalance={defiBalance} setDefiBalance={setDefiBalance} />
-          <DefiTable />
+          {/* <DefiTable /> */}
         </div>
 
         <div className={toggleState === 2 ? activeContent : content}>
           <h2 className="font-bold text-xl my-2">Collection List</h2>
-          <NFTCards />
-          <FetchNFT wallet={wallet} nft={nft} setNft={setNft} id={id} setId={setId}/>
+          {/* <NFTCards /> */}
+          <FetchNFT wallet={wallet} />
         </div>
 
         <div className={toggleState === 3 ? activeContent : content}>
           {/* <h2 className="font-bold text-xl my-2">Transaction History</h2> */}
-          <TransactionTable />
+          <TransactionTabList wallet={wallet} />
+          {/* <TransactionTable wallet={wallet} /> */}
+          {/* <TargetTable wallet={wallet} /> */}
+          {/* <SentTable wallet={wallet}/> */}
+          {/* <SendAndReceived wallet={wallet}/> */}
         </div>
       </div>
     </div>

@@ -1,11 +1,12 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import {
   AiOutlineArrowUp,
   AiOutlineArrowRight,
   AiOutlineArrowDown,
 } from "react-icons/ai";
 
-const TransactionTable = () => {
+const TransactionTable = ({wallet}) => {
+ 
   return (
     <div>
       <div className="flex flex-col justify-center h-full mt-7">
@@ -81,7 +82,7 @@ const TransactionTable = () => {
                       </div>
                     </td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td className="p-2 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex items-center justify-center text-2xl mr-2 sm:mr-3 bg-[#734ccc] rounded-full text-white w-8 h-8">
@@ -221,7 +222,7 @@ const TransactionTable = () => {
                         <p>0.01XTZ</p>
                       </div>
                     </td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </table>
             </div>

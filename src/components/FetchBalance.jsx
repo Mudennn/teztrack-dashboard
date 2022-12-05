@@ -46,7 +46,7 @@ return (
                   <p className="text-xs text-black">Idle Assets</p>
                   <p className="mt-1 flex items-center">
                     <span className="text-l md:text-2xl font-semibold">
-                      $1000
+                      $1800
                     </span>
                     <span className="text-sm ml-2">+1.5%</span>
                   </p>
@@ -63,9 +63,9 @@ return (
                   <p className="text-xs text-black">Productive Assets</p>
                   <p className="mt-1 flex items-center">
                     <span className="text-l md:text-2xl font-semibold">
-                      $1000
+                      $1230
                     </span>
-                    <span className="text-sm ml-2">+1.5%</span>
+                    <span className="text-sm ml-2">+2.5%</span>
                   </p>
                 </div>
               </div>
@@ -80,9 +80,9 @@ return (
                   <p className="text-xs text-black">Claimable</p>
                   <p className="mt-1 flex items-center">
                     <span className="text-l md:text-2xl font-semibold">
-                      $1000
+                      $1010
                     </span>
-                    <span className="text-sm ml-2">+1.5%</span>
+                    <span className="text-sm ml-2">+4.0%</span>
                   </p>
                 </div>
               </div>
@@ -99,7 +99,7 @@ return (
                     <span className="text-l md:text-2xl font-semibold">
                     {nativeBalance} ꜩ
                     </span>
-                    {/* <span className="text-sm ml-2">+1.5%</span> */}
+                    <span className="text-sm ml-2">+2.5%</span>
                   </p>
                 </div>
               </div>

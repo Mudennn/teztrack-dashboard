@@ -21,6 +21,12 @@ const WalletTable = ({ wallet, defiBalance, setDefiBalance }) => {
     }
   }, [wallet]);
 
+  // const url1 = "ipfs://QmSvrdue8Tt67Kx3b1Z1N4Mf2AN7ABcMgwcZEh4iXczqTu"
+  // const url2 = url1.substring(7,53)
+  const url3 = "https://ipfs.io/"
+  // const result= url3.concat(url2)
+  // console.log(result)
+
   return (
     <div>
       {defiBalance.length > 1 && (
@@ -48,13 +54,13 @@ const WalletTable = ({ wallet, defiBalance, setDefiBalance }) => {
                       <tr key={defi.id}>
                         <td className="p-2 whitespace-nowrap">
                           <div className="flex items-center">
-                            <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3">
+                            <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3 rounded-full bg-gray-300">
                               <img
-                                className="rounded-full"
-                                src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg"
+                                className="rounded-full bg-gray-300"
+                                src={url3.concat(defi.token.metadata.displayUri?.slice(7)) && defi.token.metadata.thumbnailUri}
                                 width="40"
                                 height="40"
-                                alt="Alex Shatov"
+                                alt=""
                               />
                             </div>
                             <div className="font-medium text-gray-800 ml-2 ">

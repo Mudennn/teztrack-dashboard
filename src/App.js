@@ -28,8 +28,7 @@ function App() {
   const [wallet, setWallet] = useState("");
     const [nativeBalance, setNativeBalance] = useState(0);
     const [defiBalance, setDefiBalance] = useState([]); 
-    const [nft, setNft] = useState([]);
-    const [id, setId] = useState()
+    
 
   // const { activeMenu } = useStateContext()
 
@@ -70,14 +69,14 @@ function App() {
                 
         
         <Routes>
-                <Route path='/home' element={<Profile2 wallet={wallet} setWallet={setWallet} nativeBalance={nativeBalance} setNativeBalance={setNativeBalance} defiBalance={defiBalance} setDefiBalance={setDefiBalance} nft={nft} setNft={setNft} id={id} setId={setId}/>}/>
-                <Route path='/' element={<Profile2 wallet={wallet} setWallet={setWallet} nativeBalance={nativeBalance} setNativeBalance={setNativeBalance} defiBalance={defiBalance} setDefiBalance={setDefiBalance} nft={nft} setNft={setNft} id={id} setId={setId}/>}/>
+                <Route path='/home' element={<Profile2 wallet={wallet} setWallet={setWallet} nativeBalance={nativeBalance} setNativeBalance={setNativeBalance} defiBalance={defiBalance} setDefiBalance={setDefiBalance} />}/>
+                <Route path='/' element={<Profile2 wallet={wallet} setWallet={setWallet} nativeBalance={nativeBalance} setNativeBalance={setNativeBalance} defiBalance={defiBalance} setDefiBalance={setDefiBalance} />}/>
                 {/* <Route path='/profile' element={<Profile />}/> */}
                 <Route path='/coinlist' element={<Coinlist />} />
                 <Route path="/coin/:id" element={<CryptoDetail />} />
                 {/* <Route path="/test" element={<Test />} /> */}
                 {/* <Route path="/profile3" element={<Profile3 />} /> */}
-                <Route path="/nft/:id" element={<NFT wallet={wallet} nft={nft} setNft={setNft} id={id} setId={setId} /> } />
+                <Route path="/nft/:id" element={<NFT wallet={wallet} /> } />
 
         </Routes>
         
