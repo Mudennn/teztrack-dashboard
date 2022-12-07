@@ -22,8 +22,8 @@ const Markets = () => {
   }
   return (
     <div>
-      <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
-        <h1 className="text-2xl mb-2 font-bold">Markets</h1>
+      <div className="m-2 md:m-10 p-2 md:p-10 w-full">
+        {/* <h1 className="text-2xl mb-2 font-bold">Markets</h1> */}
         {response && response.map((coin) => <Coin key={coin.id} coin={coin} />)}
       </div>
     </div>

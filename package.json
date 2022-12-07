@@ -6,9 +6,9 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@web3uikit/core": "^0.2.0",
-    "@web3uikit/icons": "^0.1.12",
-    "@web3uikit/web3": "^0.2.0",
+    "@web3uikit/core": "^0.2.23",
+    "@web3uikit/icons": "^0.2.23",
+    "@web3uikit/web3": "^0.2.2",
     "axios": "^1.1.2",
     "chart.js": "^3.9.1",
     "moment": "^2.29.4",
@@ -19,6 +19,7 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

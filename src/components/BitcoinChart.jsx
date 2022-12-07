@@ -31,8 +31,8 @@ ChartJS.register(
 
 const HistoryChart = () => {
     const {id} = useParams()
-    const {response} = useAxios(`coins/${id}/market_chart?vs_currency=usd&days=7`)
-    console.log(response)
+    const {response} = useAxios(`coins/bitcoin/market_chart?vs_currency=usd&days=7`)
+    console.log(`btc bro`, response)
     
     
     if(!response) {
@@ -47,7 +47,7 @@ const HistoryChart = () => {
     
     const options = {
       responsive: true,
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       plugins: {
       legend: {
       display: false,
@@ -70,8 +70,8 @@ const HistoryChart = () => {
       ]
     }
   return (
-    <div>
-      <Line options={options} data={data} />
+    <div className="h-[300px]">
+      <Line options={options} data={data}  />
     </div>
   )
 }
